@@ -3,6 +3,8 @@ import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { CdkStack } from "../lib/cdk-stack";
 import { CdkStack as CdkStack2 } from "../lib/cdk-stack2";
+import { CdkStack as CdkStack3 } from "../lib/cdk-stack3";
+import { CdkStack as CdkStack4 } from "../lib/cdk-stack4";
 
 const app = new cdk.App();
 new CdkStack(app, "CdkStack", {
@@ -22,6 +24,18 @@ new CdkStack(app, "CdkStack", {
 });
 
 new CdkStack2(app, "CdkStack2", {
+  env: {
+    account: "531366837705",
+  },
+});
+
+new CdkStack3(app, "CdkStack3", {
+  env: {
+    account: "531366837705",
+  },
+});
+
+new CdkStack4(app, "CdkStack4", {
   env: {
     account: "531366837705",
   },
