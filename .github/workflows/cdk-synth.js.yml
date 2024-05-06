@@ -38,4 +38,4 @@ jobs:
 
       - name: Deploy using CDK
         run: |
-          npm run cdk -- deploy --all --require-approval never --concurrency 2
+          npm run cdk -- deploy --all --require-approval never --concurrency 4
