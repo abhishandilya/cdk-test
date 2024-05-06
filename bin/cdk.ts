@@ -2,6 +2,7 @@
 import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
 import { CdkStack } from "../lib/cdk-stack";
+import { CdkStack as CdkStack2 } from "../lib/cdk-stack2";
 
 const app = new cdk.App();
 new CdkStack(app, "CdkStack", {
@@ -18,4 +19,10 @@ new CdkStack(app, "CdkStack", {
    * want to deploy the stack to. */
   // env: { account: '123456789012', region: 'us-east-1' },
   /* For more information, see https://docs.aws.amazon.com/cdk/latest/guide/environments.html */
+});
+
+new CdkStack2(app, "CdkStack2", {
+  env: {
+    account: "531366837705",
+  },
 });
