@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - dev
+      - main
 
 concurrency: niacin-dev-workflow
 
@@ -36,4 +36,4 @@ jobs:
 
       - name: Deploy using CDK
         run: |
-          npm run cdk -- synth --all -vv --require-approval never  -c stage=dev --concurrency 2
+          npm run cdk -- deploy --all -vv --require-approval never --concurrency 2
