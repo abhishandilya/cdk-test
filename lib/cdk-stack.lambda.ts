@@ -1,4 +1,5 @@
-export const handler = async (event: any = {}): Promise<any> => {
+export const handler = async (event: unknown = {}): Promise<unknown> => {
+  console.log(JSON.stringify(event, null, 2));
   return {
     statusCode: 200,
     body: JSON.stringify({
