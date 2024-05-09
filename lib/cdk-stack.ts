@@ -14,8 +14,8 @@ export class CdkStack extends cdk.Stack {
       runtime: Runtime.NODEJS_20_X,
     });
 
-    const issuer = `https://lynkwell-prod.us.auth0.com/`;
-    const audience = `https://api.lynkwell.com`;
+    const issuer = `https://lynkwell-dev.us.auth0.com/`;
+    const audience = `https://api.dev.lynkwell.com`;
 
     const jwtAuthorizer = new HttpJwtAuthorizer("Auth0Authorizer", issuer, {
       jwtAudience: [audience],
