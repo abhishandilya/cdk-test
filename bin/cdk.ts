@@ -1,10 +1,17 @@
 #!/usr/bin/env node
 import "source-map-support/register";
 import * as cdk from "aws-cdk-lib";
-import { CdkStack } from "../lib/cdk-stack";
+import { CdkStack as Query } from "../lib/query";
+import { CdkStack as LogGroup } from "../lib/logroup";
 
 const app = new cdk.App();
-new CdkStack(app, "CdkStack", {
+new Query(app, "Query", {
+  env: {
+    account: "531366837705",
+  },
+});
+
+new LogGroup(app, "LogGroup", {
   env: {
     account: "531366837705",
   },
